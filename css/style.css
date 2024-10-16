@@ -51,7 +51,7 @@ ul li {
 ul li::before {
   content: '★';
   color: rgb(255, 9, 9);
-  position: absolute;
+  position: relative;
   left: 0;
   font-size: 0.9em;
 }
