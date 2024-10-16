@@ -105,7 +105,7 @@ img {
 }
 
 .accomplishments-page {
-  background-image: url('/images/background.jpg');
+  background-image: url('../images/background.jpg');
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -170,7 +170,7 @@ img {
 }
 
 .index-page {
-  background-image: url('/images/pink-stars.jpg');
+  background-image: url('../images/pink-stars.jpg');
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -202,7 +202,7 @@ img {
 }
 
 .hobbies-page {
-  background-image: url('/images/babypink.jpg');
+  background-image: url('../images/babypink.jpg');
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
