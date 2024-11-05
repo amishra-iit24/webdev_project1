@@ -3,12 +3,15 @@ a {
 }
 
 body {
-  font-family: Arial, sans-serif;
+  font-family: Arial, Helvetica, sans-serif;
   background-color: #e4bbd8;
   color: #fd0ad5;
   margin: 0;
   padding: 20px;
   line-height: 1.9;
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
 }
 
 h1 {
@@ -19,19 +22,19 @@ h1 {
 
 h3 {
   color: rgb(234, 0, 255);
-  font-family: 'Roboto', sans-serif;
+  font-family: 'Roboto', Arial, sans-serif;
   text-align: center;
   line-height: 1.9;
 }
 
-h2 {  
+h2 {
   text-align: left;
 }
 
 p {
   line-height: 1.5;
   color: rgb(255, 9, 222);
-  font-family: 'Merriweather', serif;
+  font-family: 'Merriweather', Georgia, serif;
   font-size: 1.1em;
   text-align: center;
 }
@@ -44,22 +47,24 @@ ul {
 ul li {
   position: relative;
   padding-left: 20px;
-  font-family: 'Merriweather', serif;
+  font-family: 'Merriweather', Georgia, serif;
   font-size: 1.1em;
   text-align: center;
 }
 
 ul li::before {
-  content: '★';
+  content: '';
   color: rgb(255, 9, 9);
   position: relative;
   left: 0;
+  position: absolute;
   font-size: 0.9em;
 }
 
 img {
   border: 3px dashed rgb(255, 0, 0);
   border-radius: 10px;
+  float: center;
 }
 
 .horizontal-nav {
@@ -70,26 +75,34 @@ img {
   width: 100%;
   z-index: 1000;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  display: flex;
+  justify-content: center;
+  gap: 40px;/
 }
 
-.horizontal-nav li {
-  display: inline-block;
-  margin: 0 100px;
-}
-
-.horizontal-nav li a {
-  font-family: 'Merriweather', serif;
-  height: 60px;
+.horizontal-nav a {
+  font-family: 'Merriweather', Georgia, serif;
   font-size: 1.2em;
   color: white;
   text-decoration: none;
   padding: 10px 20px;
+  display: grid;
+  place-items: center;
 }
 
-.horizontal-nav li a:hover {
+section {
+  clear: both;
+  margin: 20px 0;
+  padding: 10px;
+  background-color: rgba(255, 255, 255, 0.8);
+  border-radius: 8px;
+}
+
+.horizontal-nav a:hover {
   background-color: #fff;
   color: hotpink;
   border-radius: 5px;
+  text-align: center;
 }
 
 .hobbies-page ul li {
@@ -97,7 +110,7 @@ img {
 }
 
 .hobbies-page p {
-  text-align: left;
+  align-items: left;
 }
 
 .red-tag {
@@ -119,19 +132,25 @@ img {
   border-radius: 50%;
   object-fit: cover;
   display: block;
+  margin-top: 30px;
+  margin-bottom: 30px;
   margin-left: auto;
   margin-right: auto;
+  float: center;
 }
 
 .bootstrap-angled {
-  width: 300px;
   height: auto;
   transform: rotate(10deg);
   object-fit: cover;
   margin-top: 50px;
+  margin-bottom: 30px;
   display: block;
   margin-left: auto;
   margin-right: auto;
+  width: 300px;
+  height: auto;
+  float: center;
 }
 
 .purple-tag {
@@ -145,8 +164,11 @@ img {
   border-radius: 50%;
   object-fit: cover;
   display: block;
+  margin-top: 30px;
   margin-left: auto;
   margin-right: auto;
+  margin-bottom: 30px;
+  float: center;
 }
 
 .blue-tag {
@@ -160,9 +182,11 @@ img {
   transform: rotate(10deg);
   object-fit: cover;
   margin-top: 50px;
+  margin-bottom: 50px;
   display: block;
   margin-left: auto;
   margin-right: auto;
+  float: center;
 }
 
 .maroon-tag {
