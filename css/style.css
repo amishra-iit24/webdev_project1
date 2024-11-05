@@ -64,7 +64,7 @@ ul li::before {
 img {
   border: 3px dashed rgb(255, 0, 0);
   border-radius: 10px;
-  float: center;
+  float: left;
 }
 
 .horizontal-nav {
@@ -136,7 +136,7 @@ section {
   margin-bottom: 30px;
   margin-left: auto;
   margin-right: auto;
-  float: center;
+  float: left;
 }
 
 .bootstrap-angled {
@@ -150,7 +150,7 @@ section {
   margin-right: auto;
   width: 300px;
   height: auto;
-  float: center;
+  float: left;
 }
 
 .purple-tag {
@@ -168,7 +168,7 @@ section {
   margin-left: auto;
   margin-right: auto;
   margin-bottom: 30px;
-  float: center;
+  float: left;
 }
 
 .blue-tag {
@@ -186,7 +186,7 @@ section {
   display: block;
   margin-left: auto;
   margin-right: auto;
-  float: center;
+  float: left;
 }
 
 .maroon-tag {
