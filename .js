@@ -1,7 +1,7 @@
 // scripts.js
 
 document.addEventListener("DOMContentLoaded", function() {
-    // Highlight the current page in the navigation bar
+    // Highlight the current page in the nav bar
     const currentPage = window.location.pathname.split('/').pop();
     const navLinks = document.querySelectorAll(".horizontal-nav a");
     
@@ -11,7 +11,7 @@ document.addEventListener("DOMContentLoaded", function() {
       }
     });
     
-    // Check if the page has a map (for api.html)
+    // Check if the page has a map 
     if (document.getElementById("map")) {
       initMap(); // Initialize Google Map if the map container exists
     }
