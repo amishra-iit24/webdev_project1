@@ -1,0 +1,61 @@
+/* Mobile-friendly media queries */
+
+@media (min-width: 600px) {
+    
+    body {
+      font-size: 1em;
+      padding: 15px;
+    }
+  
+    h1 {
+      font-size: 1.8em;
+      margin-top: 60px;
+    }
+  
+    .horizontal-nav p {
+      font-size: 1.1em;
+      padding: 8px 16px;
+    }
+  
+    section {
+      padding: 12px;
+    }
+  
+    ul li {
+      font-size: 1em;
+      padding-left: 15px;
+    }
+  }
+  
+  @media (min-width: 320px) and (max-width: 599px) {
+    
+    body {
+      font-size: 0.9em;
+      padding: 10px;
+    }
+  
+    h1 {
+      font-size: 1.5em;
+      margin-top: 40px;
+    }
+  
+    .horizontal-nav {
+      flex-direction: column;
+      gap: 10px;
+    }
+  
+    .horizontal-nav p {
+      font-size: 1em;
+      padding: 6px 10px;
+    }
+  
+    section {
+      padding: 8px;
+      margin: 15px 0;
+    }
+  
+    ul li {
+      font-size: 0.9em;
+      padding-left: 10px;
+    }
+  }
