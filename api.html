@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <title>My Favorite Places - Arnisha Mishra</title>
+  <link rel="stylesheet" href="css/reset.css">
+  <link rel="stylesheet" href="css/style.css">
+  <link href="http://fonts.googleapis.com/css?family=Droid+Sans" rel="stylesheet" type="text/css">
+
+  
+  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD94kqy8yFdKsMU5mkBv_26t5cTnKuZW7U&callback=initMap" async defer></script>
+
+  <style>
+    /* Styling for the map container */
+    #map {
+      height: 500px;
+      width: 100%;
+      margin-top: 20px;
+    }
+  </style>
+</head>
+
+<body class="api-page">
+  <div class="horizontal-nav">
+    <p><a href="index.html">Resume</a></p>
+    <p><a href="accomplishments.html">Accomplishments</a></p>
+    <p><a href="hobbies.html">Hobbies</a></p>
+    <p><a href="api.html">My Favorite Places</a></p>
+  </div>
+
+  <h1>My Favorite Places</h1>
+
+  <section>
+    <h2>Explore My Favorite Places on the Map</h2>
+    <p>Here are some of the locations that are meaningful to me, shown on the map below.</p>
+    
+    <!-- Map container where the map will display -->
+    <div id="map"></div>
+  </section>
+
+  <script>
+    // Initialize and add the map
+    function initMap() {
+      const locations = [
+        { lat: 40.7128, lng: -74.0060, title: 'New York City', info: 'My favorite city!' },
+        { lat: 34.0522, lng: -118.2437, title: 'Los Angeles', info: 'The city of stars!' },
+        { lat: 51.5074, lng: -0.1278, title: 'London', info: 'A city with rich history!' }
+      ];
+
+      const map = new google.maps.Map(document.getElementById("map"), {
+        zoom: 3,
+        center: { lat: 39.8283, lng: -98.5795 }, // Center of the USA for better view
+      });
+
+      // Add a custom marker and info window for each location
+      locations.forEach(location => {
+        const marker = new google.maps.Marker({
+          position: { lat: location.lat, lng: location.lng },
+          map: map,
+          title: location.title,
+          icon: {
+            url: "https://developers.google.com/maps/documentation/javascript/examples/full/images/beachflag.png", // Custom marker icon
+            scaledSize: new google.maps.Size(40, 40), // Resize icon
+          },
+        });
+
+        const infowindow = new google.maps.InfoWindow({
+          content: `<h3>${location.title}</h3><p>${location.info}</p>`,
+        });
+
+        marker.addListener("click", function () {
+          infowindow.open(map, marker);
+        });
+      });
+    }
+  </script>
+</body>
+
+</html>
